@@ -34,4 +34,6 @@ body {
   height: 40px;
   animation: spin 1s linear infinite;
 }
-
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

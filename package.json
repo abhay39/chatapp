@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@zegocloud/zego-uikit-prebuilt": "^1.8.15",
+    "lottie-react": "^2.4.0",
     "lottie-web": "^5.12.2",
     "next": "14.0.2",
     "react": "^18",

@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 })
 
-const MONGOURL="mongodb://127.0.0.1/chatApp";
+const MONGOURL="mongodb+srv://abhayguptaak39:abhayguptaak39@cluster0.h8eb9wp.mongodb.net/chatApp?retryWrites=true&w=majority";
 const JWT_SEC="a13366fdce8b93a8194dd11e6187069bcc4ecb7007c2da867e3cf736f782bd14"
 
 const connect=async()=>{
@@ -30,7 +30,7 @@ connect();
 
 app.post('/api/register', async(req, res) => {
     const {name,email,password,profile} = req.body;
-    // console.log(name,email,password,profile)
+ 
     try{
         const checkUser=await User.findOne({
             email:email
@@ -74,7 +74,7 @@ app.post('/api/login', async(req, res) => {
             });    
         }
         const isMatch=await bcrypt.compare(password,user.password);
-        console.log(isMatch)
+        
         if(!isMatch){
             res.status(500).json({
                 message:"Password is incorrect"

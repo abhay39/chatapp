@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import Dashboard from './dashboard/page'
 import LoginScreen from './login/page'
-import { Auth } from './hooks'
+import { Auth, AuthProvider } from './hooks'
 
 
 const Navigations = () => {
@@ -14,9 +14,9 @@ const Navigations = () => {
         }
     },[userState])
 
-  return (
+return (
     <>
-        {userState?(<Dashboard />):(<LoginScreen />)}
+      {userState?(<Dashboard />):(<LoginScreen />)}
     </>
   )
 }

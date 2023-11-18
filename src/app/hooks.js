@@ -5,7 +5,7 @@ const Auth =createContext({});
 
 const AuthProvider =({children})=>{
     const [userState,setUserState]=useState(false);
-    const URL="http://localhost:5000";
+    const URL="https://chattingappweb.vercel.app";
     const [userDetails,setUserDetails]=useState("");
 
     return (
